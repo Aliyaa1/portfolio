@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Aliya |a-propos</title>
+    <title>Aliya | a-propos</title>
     <script>
         function openMenu() {
-            let nav = document.querySelector("nav")
-            nav.classList.toggle("open")
+            let nav = document.querySelectorAll("nav")
+            nav.forEach(element => {
+
+                element.classList.toggle("open")
+            });
         }
     </script>
 </head>
@@ -22,27 +25,49 @@
     <!-- le header qui contient notre entête de site (logo, nav etc) -->
     <header>
         <nav>
-            <div id="logo">logo</div>
-            <i onclick="openMenu()" class="fa-solid fa-bars" style="color: #6d93d6;"></i>
+            <!-- id = unique (1 seul par page ) -->
+            <div id="logo">LOGO</div>
+            <i onclick="openMenu()" class="fa-solid fa-bars"></i>
             <ul class="liste">
+                <!-- plusieurs classes possibles -->
                 <li>
-
-                    <a href="a-propos.html">A propos</a>
+                    <a class="liens" href="#a-propos">A propos</a>
                 </li>
                 <li>
-                    <a href="#">Projets</a>
+                    <a class="liens" href="#experiences">Expériences</a>
                 </li>
                 <li>
-                    <a href="#">Experience</a>
-
+                    <a class="liens" href="#projets">Projets</a>
                 </li>
-                <li></li>
             </ul>
+
+        </nav>
+        <nav class="mobile">
+            <!-- id = unique (1 seul par page ) -->
+            <div class="header-nav-mobile">
+                <div id="logo">LOGO</div>
+                <i onclick="openMenu()" class="fa-solid fa-xmark"></i>
+            </div>
+            <ul class="liste">
+                <!-- plusieurs classes possibles -->
+                <li>
+                    <a class="liens" href="#a-propos">A propos</a>
+                </li>
+                <li>
+                    <a class="liens" href="#experiences">Expériences</a>
+                </li>
+                <li>
+                    <a class="liens" href="#projets">Projets</a>
+                </li>
+            </ul>
+
         </nav>
     </header>
     <!-- contenu principal changeant à chaque page -->
     <main>
-        contenu
+        <section id="a-propos">A propos</section>
+        <section id="experiences">Expériences</section>
+        <section id="projets">projets</section>
     </main>
     <!-- notre pied de page -->
     <footer>
